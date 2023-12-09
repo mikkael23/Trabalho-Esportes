@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esportes - Atletas </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        #conteudo {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #loading {
+            text-align: center;
+            padding: 10px;
+            background-color: #dcdde1;
+            margin-bottom: 10px;
+        }
+
+        #buttonnew {
+            display: block;
+            margin-bottom: 10px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #formulario {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        input[type="button"]:last-child {
+            margin-right: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+            color: #34495e;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+            border: 1px solid #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ESPORTES E ATLETAS</h1>
+    <div id="loading" style="display: none;"></div>
+
+    <div id="conteudo">
+        <input id="buttonnew" type="button" value="Novo Registro" onclick="novo()" />
+        <div id="formulario" style="display: none;">
+            <label>
+                Nome: <input type="text" id="nome" />
+            </label><br />
+            <label>
+                Modalidade: <input type="text" id="modalidade" />
+            </label><br />
+            <label>
+                Idade: <input type="text" id="idade" />
+            </label><br />
+            <label>
+                Clube: <input type="text" id="clube" />
+            </label><br />
+            <input type="button" value="Salvar" onclick="salvar()" />
+            <input type="button" value="Cancelar" onclick="cancelar()" />
+        </div>
+        <div id="lista">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Modalidade</th>
+                    <th>Idade</th>
+                    <th>Clube</th>
+                    <th></th>
+                </thead>
+                <tbody id="dados"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Atleta.js"></script>
+</body>
+
+</html>
